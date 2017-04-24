@@ -23,7 +23,7 @@ n/a
 LIMITATIONS
 ===========
 
-Currently, this tool has only been confirmed wokring on Windows 2012 Server Standard running Powershell 4.0 using default ObserveIT settings.  De
+Currently, this tool has only been confirmed wokring on Windows 2012 Server Standard running Powershell 4.0 using default ObserveIT settings.
  
 
 LICENSE
