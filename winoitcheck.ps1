@@ -7,10 +7,13 @@
 # blog post: 
 #
 # DESCRIPTION
-# This tool enables an administrator to verify an ObserveIT agent installation on windows, similar to the ObserveIT linux tool oitcheck.  Currently, as of version 6.6.2 a windows diagnostic tool 
-# is not provided by ObserveIT and therefore I decided to create my own to aid rollouts and/or installations by users who do not have access to the Webconsole GUI.
+# This tool enables an administrator to verify an ObserveIT agent installation 
+# on windows, similar to the ObserveIT linux tool oitcheck.  Currently, as of 
+# version 6.6.2 a windows diagnostic tool is not provided by ObserveIT and 
+# therefore I decided to create my own to aid rollouts and/or installations by
+# users who do not have access to the Web console GUI.
 #
-# USAGE
+# USAGE 
 # ./winoitcheck.ps1
 #
 # TROUBLESHOOTING
@@ -18,7 +21,8 @@
 #
 # LIMITATIONS
 #
-# Currently, this tool has only been confirmed wokring on Windows 2012 Server Standard running Powershell 4.0 using default ObserveIT settings.  De
+# Currently, this tool has only been confirmed wokring on Windows 2012 
+# Server Standard running Powershell 4.0 using default ObserveIT settings.
 # 
 #
 # LICENSE
@@ -43,7 +47,7 @@
 write-host "winoitcheck V0.1 2017-04-24"
 write-Host "NOTE: This program is not endorsed by ObserveIT"
 write-host
-$Platform =Get-WmiObject -class Win32_OperatingSystem
+$Platform = Get-WmiObject -class Win32_OperatingSystem
 write-host "Detected platform:" $Platform.caption
 write-host
 
