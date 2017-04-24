@@ -6,8 +6,7 @@ author: Gareth Darby
 contact: garethdarby@gmail.com
 blog post: 
 
-DESCRIPTION
-===========
+#DESCRIPTION
 This tool enables an administrator to verify an ObserveIT agent installation on windows, similar to the ObserveIT linux tool oitcheck.  Currently, as of version 6.6.2 a windows diagnostic tool is not provided by ObserveIT and therefore I decided to create my own to aid rollouts and/or installations by users who do not have access to the Webconsole GUI.
 
 USAGE
