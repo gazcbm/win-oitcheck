@@ -1,6 +1,6 @@
 Windows OIT Check
 =================
-Revision 0.1 2017-04-24
+Revision 0.2 2017-04-26
 
 author: Gareth Darby
 contact: garethdarby@gmail.com
@@ -44,5 +44,5 @@ LICENSE
 
 CHANGELOG
 =========
-
+V0.2 - Display installed ObserveIT version, re-defined how the service information is obtained and displayed
 v0.1 - Initial Release
