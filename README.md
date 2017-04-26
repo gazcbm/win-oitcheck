@@ -44,5 +44,5 @@ LICENSE
 
 CHANGELOG
 =========
-V0.2 - Display installed ObserveIT version, re-defined how the service information is obtained and displayed
-v0.1 - Initial Release
+V0.2 - Display installed ObserveIT version, re-defined how the service information is obtained and displayed - 26-04-2017
+v0.1 - Initial Release - 24/04/2017
