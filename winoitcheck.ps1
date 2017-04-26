@@ -41,6 +41,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.   
 #
 # CHANGELOG
+# V0.2 - Display installed ObserveIT version, re-defined how the service information is obtained and displayed 
 # v0.1 - Initial Release
 #
 
@@ -52,9 +53,9 @@ write-host "Detected platform:" $Platform.caption
 write-host
 
 write-host "Checking for ObserveIT in Installed programs: " -NoNewLine
-$Installed = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Select DisplayName | where {$_.DisplayName -match "ObserveIT Agent"}
+$Installed = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | where {$_.DisplayName -match "ObserveIT Agent"}
 if ($installed) {
- write-host "PASS" -foregroundcolor "green"
+ write-host "PASS - Version"$Installed.DisplayVersion -foregroundcolor "green"
  write-host 
 } else {
  write-host "FAILED" -foregroundcolor "red"
@@ -62,11 +63,13 @@ if ($installed) {
 }
 
 write-host "Check for ObserveIT agent service: " -NoNewLine
-$service = Get-Service | Where-Object {$_.name -eq "ObserveIT Service Components Controller"}
+#$service = Get-Service -name "ObserveIT Service Components Controller"
+$service = Get-WmiObject -Class Win32_Service -Filter "Name='ObserveIT Service Components Controller'"
 if ($service) {
     write-host "PASS" -foregroundcolor "green"
-    write-host "ObserveIT Service Components Controller is"$service.status
-    Get-process | where-object {$_.name -eq "rcdsvc"}
+    write-host "ObserveIT Service Components Controller is"$service.state
+    write-host "Service Startup Type :"$service.startmode
+    write-host "Process ID           :"$service.ProcessId
     write-host
 } else {
     write-host "FAILED" -foregroundcolor "red"
