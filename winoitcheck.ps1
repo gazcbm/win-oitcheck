@@ -4,7 +4,7 @@
 #
 # author: Gareth Darby
 # contact: garethdarby@gmail.com
-# blog post: 
+# blog post: http://www.rootshell.me/2017/05/observeit-win-oitcheck-tool.html
 #
 # DESCRIPTION
 # This tool enables an administrator to verify an ObserveIT agent installation 
